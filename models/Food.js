@@ -8,7 +8,7 @@ const FoodSchema = new mongoose.Schema({
         maxLength: 12,
     },
     expirationDate: {
-        type: Date,
+        type: `String`,
     },
     description: {
         type: `String`,

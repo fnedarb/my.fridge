@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import axios from 'axios';
-import FoodCard from './FoodCard';
+import FoodCard from '../components/FoodCard';
 
 class FridgeShelves extends Component {
     constructor(props) {
@@ -11,9 +11,9 @@ class FridgeShelves extends Component {
                 food: []
             };
     }
-    componentDidMount() {
+        elementDidMount() {
         axios
-        .get('http://localhost:4444/api/fridges')
+        .get('http://localhost:4445/')
         .then(res => {
             this.setState({
                 food: res.data

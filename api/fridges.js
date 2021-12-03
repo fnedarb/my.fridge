@@ -3,11 +3,11 @@ const router = express.Router();
 
 // Fridge Model
 
-const Fridge = require(`../../models/Fridge`);
-const Food = require(`../../models/Food`);
+const Fridge = require(`../models/Fridge`);
+const Food = require(`../models/Food`);
 
 // test route
-router.get(`/test`, (req,res) => res.send(`testing!`));
+router.get('/test', (req,res) => {res.send(`testing!`);});
 
 // populate food
 router.get('/', (req, res) => {
