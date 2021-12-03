@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+// import FoodModel from '/models/Food';
 import '../App.css';
 import axios from 'axios';
-import FoodCard from '../components/FoodCard';
+import FridgeCard from '../components/FridgeCard';
 
 class FridgeShelves extends Component {
     constructor(props) {
@@ -12,17 +13,17 @@ class FridgeShelves extends Component {
             };
     }
         elementDidMount() {
-        axios
-        .get('http://localhost:4445/')
-        .then(res => {
-            this.setState({
-                food: res.data
-            })
-        })
-        .catch(err => {
-            console.log('Error in FridgeShelves!');
-        });
-    }
+            axios
+                .get('http://localhost:4445/')
+                .then(res => {
+                    this.setState({
+                        food: res.data
+                    })
+                })
+            .catch(err => {
+                console.log('Error in FridgeShelves!');
+            });
+        }
     render() {
         const food = this.state.food;
         console.log("PrintFood: " + food);
@@ -31,8 +32,8 @@ class FridgeShelves extends Component {
         if(!food){
             foodList = "There's no food in the fridge..."
         } else {
-            foodList = food.map((food, k) =>
-                <FoodCard food={food} key={k} />
+            foodList = food.map((food) =>
+                <li> {food} </li>
             );
         }
         return(

@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import '../App.css';
 
-const FoodCard = (props) => {
+const FridgeCard = (props) => {
     const food= props.food;
 
     return(
         <div className="card-container">
             <div className="desc">
-                <h2>HI THERE</h2>
+                <h3>{ food.foodName }</h3>
+                <p>{ food.description }</p>
             </div>
             </div>
     )
 };
 
-export default FoodCard;
+export default FridgeCard;
