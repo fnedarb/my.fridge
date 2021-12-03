@@ -19,11 +19,13 @@
   },
   "homepage": "https://github.com/fnedarb/my.fridge#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "config": "^3.3.6",
     "express": "^4.17.1",
     "mongoose": "^6.0.14",
+    "react-router-dom": "^6.0.2",
     "validation": "^0.0.1"
   },
   "devDependencies": {
