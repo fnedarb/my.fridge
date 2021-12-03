@@ -1,6 +1,6 @@
 const mongoose = require(`mongoose`);
 
-const FoodSchema = new.mongoose.Schema({
+const FoodSchema = new mongoose.Schema({
     foodName: {
         type: `String`,
         required: true,
@@ -14,9 +14,8 @@ const FoodSchema = new.mongoose.Schema({
         type: `String`,
         maxLength: 150,
     },
-    {
-    timestamps: true
-    }
-});
+},
+{timestamps: true}
+);
 
 module.exports = Food = mongoose.model("Food", FoodSchema);
